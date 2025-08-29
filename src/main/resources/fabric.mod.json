@@ -1,0 +1,36 @@
+{
+	"schemaVersion": 1,
+	"id": "better-hammers",
+	"version": "${version}",
+	"name": "Better Hammers",
+	"description": "Mine multiple blocks at once with hammers !",
+	"authors": [
+		"Diiiaz"
+	],
+	"contact": {
+		"sources": "https://github.com/diiiaz/Better-Hammers"
+	},
+	"license": "MIT",
+	"icon": "assets/better-hammers/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"io.github.diiiaz.BetterHammers"
+		],
+		"fabric-datagen": [
+			"io.github.diiiaz.BetterHammersDataGenerator"
+		]
+	},
+	"mixins": [
+		"better-hammers.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.17.2",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
