@@ -3,7 +3,6 @@ package io.github.diiiaz.better_hammers.util;
 import io.github.diiiaz.better_hammers.Mod;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
-import net.minecraft.registry.Registries;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
