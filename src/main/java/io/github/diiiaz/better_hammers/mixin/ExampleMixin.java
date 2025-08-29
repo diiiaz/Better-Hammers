@@ -1,4 +1,4 @@
-package io.github.diiiaz.mixin;
+package io.github.diiiaz.better_hammers.mixin;
 
 import net.minecraft.server.MinecraftServer;
 import org.spongepowered.asm.mixin.Mixin;

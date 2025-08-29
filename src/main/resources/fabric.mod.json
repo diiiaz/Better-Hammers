@@ -15,10 +15,13 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"io.github.diiiaz.BetterHammers"
+			"io.github.diiiaz.better_hammers.Mod"
 		],
+        "client": [
+          "io.github.diiiaz.better_hammers.ModClient"
+        ],
 		"fabric-datagen": [
-			"io.github.diiiaz.BetterHammersDataGenerator"
+			"io.github.diiiaz.better_hammers.ModDataGen"
 		]
 	},
 	"mixins": [
