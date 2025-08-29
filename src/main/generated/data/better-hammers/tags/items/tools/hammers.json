@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "better-hammers:diamond_hammer",
+    "better-hammers:stone_hammer",
+    "better-hammers:golden_hammer",
+    "better-hammers:netherite_hammer",
+    "better-hammers:wooden_hammer",
+    "better-hammers:iron_hammer"
+  ]
+}

@@ -1,5 +1,6 @@
 package io.github.diiiaz.better_hammers;
 
+import io.github.diiiaz.better_hammers.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -11,6 +12,8 @@ public class Mod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		LOGGER.info("Hello Fabric world!");
+
+        ModItems.register();
+
 	}
 }
