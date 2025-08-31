@@ -10,7 +10,6 @@ import net.minecraft.util.Identifier;
 public class ModTags {
 
     public static class Blocks {
-
         public static final TagKey<Block> HAMMER_MINEABLE = createTag("mineable/hammer");
 
         private static TagKey<Block> createTag(String name) { return TagKey.of(RegistryKeys.BLOCK, new Identifier(Mod.ID, name)); }

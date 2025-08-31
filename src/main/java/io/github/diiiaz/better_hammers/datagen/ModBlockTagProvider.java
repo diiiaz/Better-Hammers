@@ -17,16 +17,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
         getOrCreateTagBuilder(ModTags.Blocks.HAMMER_MINEABLE)
-            .forceAddTag(BlockTags.BASE_STONE_OVERWORLD)
-            .forceAddTag(BlockTags.BASE_STONE_NETHER)
-            .forceAddTag(BlockTags.TERRACOTTA)
-            .forceAddTag(BlockTags.COAL_ORES)
-            .forceAddTag(BlockTags.COPPER_ORES)
-            .forceAddTag(BlockTags.IRON_ORES)
-            .forceAddTag(BlockTags.GOLD_ORES)
-            .forceAddTag(BlockTags.EMERALD_ORES)
-            .forceAddTag(BlockTags.DIAMOND_ORES)
-            .forceAddTag(BlockTags.LAPIS_ORES)
-            .forceAddTag(BlockTags.REDSTONE_ORES);
+            .forceAddTag(BlockTags.PICKAXE_MINEABLE)
+            .forceAddTag(BlockTags.SHOVEL_MINEABLE)
+            .forceAddTag(BlockTags.AXE_MINEABLE)
+        ;
     }
 }

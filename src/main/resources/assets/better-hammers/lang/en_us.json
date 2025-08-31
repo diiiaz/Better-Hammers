@@ -4,5 +4,12 @@
   "item.better-hammers.iron_hammer": "Iron Hammer",
   "item.better-hammers.golden_hammer": "Golden Hammer",
   "item.better-hammers.diamond_hammer": "Diamond Hammer",
-  "item.better-hammers.netherite_hammer": "Netherite Hammer"
+  "item.better-hammers.netherite_hammer": "Netherite Hammer",
+
+  "enchantment.better-hammers.magnitude": "Magnitude",
+  "enchantment.better-hammers.tunneler": "Tunneler",
+
+  "_comment": "Enchantment-Descriptions mod compatibility",
+  "enchantment.better-hammers.magnitude.desc": "Increases hammers mining width.",
+  "enchantment.better-hammers.tunneler.desc": "Increases hammers mining depth."
 }
