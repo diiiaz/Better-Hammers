@@ -15,7 +15,7 @@
     " # "
   ],
   "result": {
-    "item": "better-hammers:diamond_hammer"
-  },
-  "show_notification": true
+    "count": 1,
+    "id": "better-hammers:diamond_hammer"
+  }
 }

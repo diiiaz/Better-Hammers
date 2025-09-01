@@ -6,7 +6,7 @@
       "item": "minecraft:stick"
     },
     "X": {
-      "item": "minecraft:iron_ingot"
+      "tag": "minecraft:stone_tool_materials"
     }
   },
   "pattern": [
@@ -15,7 +15,7 @@
     " # "
   ],
   "result": {
-    "item": "better-hammers:iron_hammer"
-  },
-  "show_notification": true
+    "count": 1,
+    "id": "better-hammers:stone_hammer"
+  }
 }

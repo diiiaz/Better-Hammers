@@ -19,7 +19,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
-        getOrCreateTagBuilder(TagKey.of(RegistryKeys.ITEM, new Identifier(Mod.ID, "tools/hammers")))
+        getOrCreateTagBuilder(TagKey.of(RegistryKeys.ITEM, Identifier.of(Mod.ID, "tools/hammers")))
             .add(ModItems.DIAMOND_HAMMER)
             .add(ModItems.STONE_HAMMER)
             .add(ModItems.GOLDEN_HAMMER)

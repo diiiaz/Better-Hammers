@@ -1,13 +1,13 @@
-// 1.20.1	2025-08-31T12:04:46.2079469	Better Hammers/Recipes
-5a113162eccafbb7e1181b52864307b78e364d38 data\better-hammers\recipes\stone_hammer.json
-8ccdc28d06b00efe5fcc3662e586d4627410c309 data\better-hammers\recipes\diamond_hammer.json
-5d11ca2b7f48818e78061feef0b31e648e19d1f8 data\better-hammers\recipes\iron_hammer.json
-891adb5a4586c825ed1e6f4a9e28c110077dde1a data\better-hammers\recipes\netherite_hammer_smithing.json
-41cbb78e1247f28994e1af0272fc6f02bebc8699 data\better-hammers\recipes\wooden_hammer.json
-0817a523638adc9489d8bd7c26317bb07be8dde4 data\better-hammers\advancements\recipes\tools\netherite_hammer_smithing.json
-12eb29dc7af63ddc0a2b439f2c13ab98309499d7 data\better-hammers\advancements\recipes\tools\iron_hammer.json
-f7b23fc5268b869bb3ea974269aa2b9c8d94aae9 data\better-hammers\advancements\recipes\tools\diamond_hammer.json
-402aaa631f2b1200a720ee28c830f7d9c9120de0 data\better-hammers\recipes\golden_hammer.json
-7326dc4127eefbaae02dec9a3549aaa0938fe6c8 data\better-hammers\advancements\recipes\tools\stone_hammer.json
-ce3aed13731cf192b3a846b848d3936bcaf9c880 data\better-hammers\advancements\recipes\tools\wooden_hammer.json
-88e1022001a890aee215946ab2f07756945b2b56 data\better-hammers\advancements\recipes\tools\golden_hammer.json
+// 1.21.1	2025-09-01T22:26:38.0815748	Better Hammers/Recipes
+88d4c4074565c918b1517a71fe2e1822ea2fc1c2 data\better-hammers\recipe\iron_hammer.json
+3004d54a4e68b1811369332dd3fc603f3fcf0d6c data\better-hammers\advancement\recipes\tools\diamond_hammer.json
+38881e124316b014fbf27a1dfaa335c1a3645d17 data\better-hammers\advancement\recipes\tools\netherite_hammer_smithing.json
+f8b4461f4c2ed54dec42a4e69339e68ec25a3d95 data\better-hammers\recipe\stone_hammer.json
+8ad775805eb9eee8a0290c7801b815ec442d60ef data\better-hammers\recipe\netherite_hammer_smithing.json
+88108683051c8d8b81ade857bb0cea9f24094370 data\better-hammers\recipe\diamond_hammer.json
+e813851a01fa114d33750a83026aad38cc581af7 data\better-hammers\recipe\wooden_hammer.json
+4c49d1dfcf506d1fd4df5036989fe4ebd669691e data\better-hammers\advancement\recipes\tools\wooden_hammer.json
+efd12e3a7ab31395e9d9689fb09ecaad7a55568b data\better-hammers\recipe\golden_hammer.json
+c27bf906b84597c271339e4ec9e9cfb322cc8fc3 data\better-hammers\advancement\recipes\tools\golden_hammer.json
+88ce19478efea617a33454080861e2e13922ec90 data\better-hammers\advancement\recipes\tools\iron_hammer.json
+b8e90d44d166d05e7258abf4c0a177030a0c3688 data\better-hammers\advancement\recipes\tools\stone_hammer.json

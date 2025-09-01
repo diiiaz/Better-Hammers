@@ -54,8 +54,8 @@ public class WorldRendererMixin {
 
         if (crosshairState.isAir() || !client.world.getWorldBorder().contains(crosshairPos) || !tool.isBlockValidForBreaking(world, crosshairPos, heldStack)) { return; }
 
-        int radius = ToolRadiusCallback.EVENT.invoker().getRadius(heldStack, tool.getRadius(heldStack));
-        List<BlockPos> positions = tool.getBlockFinder().findPositions(world, client.player, radius, tool.getDepth(heldStack));
+        int radius = ToolRadiusCallback.EVENT.invoker().getRadius(heldStack, tool.getRadius(world, heldStack));
+        List<BlockPos> positions = tool.getBlockFinder().findPositions(world, client.player, radius, tool.getDepth(world, heldStack));
         List<VoxelShape> outlineShapes = new ArrayList<>();
         outlineShapes.add(VoxelShapes.empty());
 

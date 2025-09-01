@@ -27,25 +27,24 @@ public class ServerPlayerInteractionManagerMixin implements PlayerInteractionMan
     @Shadow
     protected ServerWorld world;
 
-    @Unique private boolean isMining = false;
+    @Unique
+    private boolean isMining = false;
 
     @Inject(
             method = "tryBreakBlock",
-            at = @At(
-                    value = "INVOKE",
-                    target = "Lnet/minecraft/block/Block;onBreak(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;Lnet/minecraft/entity/player/PlayerEntity;)V"
-            ),
+            at = @At(value = "INVOKE", target = "Lnet/minecraft/block/Block;onBreak(Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;Lnet/minecraft/entity/player/PlayerEntity;)Lnet/minecraft/block/BlockState;"),
             cancellable = true
     )
     private void tryBreak(BlockPos pos, CallbackInfoReturnable<Boolean> cir) {
         ItemStack heldStack = player.getMainHandStack();
-
         if (heldStack.getItem() instanceof HammerTool) {
             // This is to avoid recursion, but the goal is to make sure every block it doesn't override cancelled block breaks using Fabric's callbacks. This was made to support claim mods.
-            boolean v = isMining || ((HammerTool) heldStack.getItem()).attemptBreak(world, pos, player, ((HammerTool) heldStack.getItem()).getRadius(heldStack), ((HammerTool) heldStack.getItem()).getProcessor(world, player, pos, heldStack));
+            boolean v = isMining || ((HammerTool) heldStack.getItem()).attemptBreak(world, pos, player, ((HammerTool) heldStack.getItem()).getRadius(world, heldStack), ((HammerTool) heldStack.getItem()).getProcessor(world, player, pos, heldStack));
 
             // only cancel if the break was successful
-            if(v) { cir.setReturnValue(true); }
+            if (v) {
+                cir.setReturnValue(true);
+            }
         }
     }
 

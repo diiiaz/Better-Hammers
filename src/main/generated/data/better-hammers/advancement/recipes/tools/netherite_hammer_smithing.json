@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:netherite_ingot"
-            ]
+            "items": "minecraft:netherite_ingot"
           }
         ]
       },
@@ -15,21 +13,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:netherite_hammer_smithing"
+        "recipe": "better-hammers:netherite_hammer_smithing"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_netherite_ingot",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_netherite_ingot"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:netherite_hammer_smithing"
+      "better-hammers:netherite_hammer_smithing"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

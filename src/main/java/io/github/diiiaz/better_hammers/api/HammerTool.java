@@ -18,6 +18,7 @@ import net.minecraft.world.World;
  * or use one of the provided base item classes,
  * {@link HammerItem}.
  */
+@SuppressWarnings("unused")
 public interface HammerTool {
 
     /**
@@ -34,7 +35,7 @@ public interface HammerTool {
      * @param stack  current {@link HammerTool} stack being used
      * @return       breaking radius of stack
      */
-    int getRadius(ItemStack stack);
+    int getRadius(World world, ItemStack stack);
 
     /**
      * Returns the depth of this {@link HammerTool}.
@@ -46,7 +47,7 @@ public interface HammerTool {
      * @param stack   current {@link HammerTool} stack being used
      * @return        breaking depth of stack
      */
-    default int getDepth(ItemStack stack) {
+    default int getDepth(World world, ItemStack stack) {
         return 0;
     }
 
@@ -119,7 +120,7 @@ public interface HammerTool {
         // only do a 3x3 break if the player's tool is effective on the block they are breaking
         // this makes it so breaking gravel doesn't break nearby stone
         int radius = ToolRadiusCallback.EVENT.invoker().getRadius(stack, breakRadius);
-        int depth = getDepth(stack);
+        int depth = getDepth(world, stack);
 
         // break blocks
         BlockBreaker.breakInRadius(world, player, radius, depth, getBlockFinder(), (view, breakPos) -> isBlockValidForBreaking(view, breakPos, stack), processor, true);

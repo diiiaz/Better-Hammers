@@ -20,33 +20,44 @@ import net.minecraft.world.World;
 import java.util.ArrayList;
 import java.util.List;
 
+@SuppressWarnings("unused")
 public class BlockBreaker {
 
     public static void breakInRadius(World world, PlayerEntity player, int radius, int depth, BlockFinder finder, BreakValidator breakValidator, BlockProcessor smelter, boolean damageTool) {
-        if (world.isClient) { return; }
+        if (world.isClient) {
+            return;
+        }
 
         ServerPlayerInteractionManager interactionManager = ((ServerPlayerEntity) player).interactionManager;
         ((PlayerInteractionManagerExtension) interactionManager).betterHammers$setMining(true);
 
         List<BlockPos> brokenBlocks = finder.findPositions(world, player, radius, depth);
-        for(BlockPos pos : brokenBlocks) {
+        for (BlockPos pos : brokenBlocks) {
             BlockState state = world.getBlockState(pos);
             BlockEntity blockEntity = world.getBlockState(pos).hasBlockEntity() ? world.getBlockEntity(pos) : null;
 
-            if (!breakValidator.canBreak(world, pos) || state.isAir()) { continue; }
+            if (!breakValidator.canBreak(world, pos) || state.isAir()) {
+                continue;
+            }
 
             state.getBlock().onBreak(world, pos, state, player);
-            if (!interactionManager.tryBreakBlock(pos)) { continue; }
+            if (!interactionManager.tryBreakBlock(pos)) {
+                continue;
+            }
 
             boolean result = PlayerBlockBreakEvents.BEFORE.invoker().beforeBlockBreak(world, player, pos, state, world.getBlockEntity(pos));
-            if(!result) { continue; }
+            if (!result) {
+                continue;
+            }
 
             boolean bl = world.removeBlock(pos, false);
             if (bl) {
                 state.getBlock().onBroken(world, pos, state);
             }
 
-            if (player.isCreative()) { continue; }
+            if (player.isCreative()) {
+                continue;
+            }
 
             Vec3d offsetPos = new Vec3d(pos.getX() + .5, pos.getY() + .5, pos.getZ() + .5);
 
@@ -58,13 +69,17 @@ public class BlockBreaker {
             dropItems(player, world, processed, offsetPos);
             state.onStacksDropped((ServerWorld) world, pos, player.getMainHandStack(), true);
 
-            if (!damageTool) { continue; }
+            if (!damageTool) {
+                continue;
+            }
 
             ItemStack itemStack = player.getMainHandStack();
             boolean usingEffectiveTool = player.canHarvest(state);
             itemStack.postMine(world, state, pos, player);
 
-            if (!usingEffectiveTool) { continue; }
+            if (!usingEffectiveTool) {
+                continue;
+            }
 
             player.incrementStat(Stats.MINED.getOrCreateStat(state.getBlock()));
             player.addExhaustion(0.005F);
@@ -73,8 +88,10 @@ public class BlockBreaker {
     }
 
     private static void dropItems(PlayerEntity player, World world, List<ItemStack> stacks, Vec3d pos) {
-        for(ItemStack stack : stacks) {
-            if (stack.isEmpty()) { continue; }
+        for (ItemStack stack : stacks) {
+            if (stack.isEmpty()) {
+                continue;
+            }
             ItemEntity itemEntity = new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), stack);
             world.spawnEntity(itemEntity);
         }

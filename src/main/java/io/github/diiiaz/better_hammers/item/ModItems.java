@@ -1,24 +1,30 @@
 package io.github.diiiaz.better_hammers.item;
 
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import io.github.diiiaz.better_hammers.Mod;
+import io.github.diiiaz.better_hammers.util.ModTags;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
-import net.minecraft.item.Items;
-import net.minecraft.item.ToolMaterials;
+import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModItems {
 
-    public static final Item WOODEN_HAMMER = registerItem("wooden_hammer", new HammerItem(ToolMaterials.WOOD, 9.0f, -3.4f, new FabricItemSettings()));
-    public static final Item STONE_HAMMER = registerItem("stone_hammer", new HammerItem(ToolMaterials.STONE, 10.0f, -3.4f, new FabricItemSettings()));
-    public static final Item IRON_HAMMER = registerItem("iron_hammer", new HammerItem(ToolMaterials.IRON, 9.0f, -3.2f, new FabricItemSettings()));
-    public static final Item GOLDEN_HAMMER = registerItem("golden_hammer", new HammerItem(ToolMaterials.GOLD, 9.0f, -3.3f, new FabricItemSettings()));
-    public static final Item DIAMOND_HAMMER = registerItem("diamond_hammer", new HammerItem(ToolMaterials.DIAMOND, 8.0f, -3.2f, new FabricItemSettings()));
-    public static final Item NETHERITE_HAMMER = registerItem("netherite_hammer", new HammerItem(ToolMaterials.NETHERITE, 8.0f, -3.2f, new FabricItemSettings().fireproof()));
+    public static final Item WOODEN_HAMMER = registerItem("wooden_hammer",
+            new HammerItem(ToolMaterials.WOOD, ModTags.Blocks.HAMMER_MINEABLE, new Item.Settings().attributeModifiers(HammerItem.createAttributeModifiers(ToolMaterials.WOOD, 9.0F, -3.4F))));
+    public static final Item STONE_HAMMER = registerItem("stone_hammer",
+            new HammerItem(ToolMaterials.STONE, ModTags.Blocks.HAMMER_MINEABLE, new Item.Settings().attributeModifiers(HammerItem.createAttributeModifiers(ToolMaterials.STONE, 10.0F, -3.4F))));
+    public static final Item IRON_HAMMER = registerItem("iron_hammer",
+            new HammerItem(ToolMaterials.IRON, ModTags.Blocks.HAMMER_MINEABLE, new Item.Settings().attributeModifiers(HammerItem.createAttributeModifiers(ToolMaterials.IRON, 9.0F, -3.2F))));
+    public static final Item GOLDEN_HAMMER = registerItem("golden_hammer",
+            new HammerItem(ToolMaterials.GOLD, ModTags.Blocks.HAMMER_MINEABLE, new Item.Settings().attributeModifiers(HammerItem.createAttributeModifiers(ToolMaterials.GOLD, 9.0F, -3.3F))));
+    public static final Item DIAMOND_HAMMER = registerItem("diamond_hammer",
+            new HammerItem(ToolMaterials.DIAMOND, ModTags.Blocks.HAMMER_MINEABLE, new Item.Settings().attributeModifiers(HammerItem.createAttributeModifiers(ToolMaterials.DIAMOND, 8.0F, -3.2F))));
+    public static final Item NETHERITE_HAMMER = registerItem("netherite_hammer",
+            new HammerItem(ToolMaterials.NETHERITE, ModTags.Blocks.HAMMER_MINEABLE, new Item.Settings()
+                    .attributeModifiers(HammerItem.createAttributeModifiers(ToolMaterials.NETHERITE, 8.0F, -3.2F))
+                    .fireproof()));
 
     private static void addItemsToToolsItemGroup(FabricItemGroupEntries entries) {
         entries.addAfter(Items.WOODEN_AXE, WOODEN_HAMMER);
@@ -39,7 +45,7 @@ public class ModItems {
     }
 
     private static Item registerItem(String name, Item item) {
-        return Registry.register(Registries.ITEM, new Identifier("better-hammers", name), item);
+        return Registry.register(Registries.ITEM, Identifier.of(Mod.ID, name), item);
     }
 
     public static void register() {

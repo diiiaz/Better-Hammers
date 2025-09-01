@@ -6,7 +6,7 @@
       "item": "minecraft:stick"
     },
     "X": {
-      "tag": "minecraft:stone_tool_materials"
+      "tag": "minecraft:planks"
     }
   },
   "pattern": [
@@ -15,7 +15,7 @@
     " # "
   ],
   "result": {
-    "item": "better-hammers:stone_hammer"
-  },
-  "show_notification": true
+    "count": 1,
+    "id": "better-hammers:wooden_hammer"
+  }
 }

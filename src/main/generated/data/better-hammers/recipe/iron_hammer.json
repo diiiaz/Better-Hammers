@@ -6,7 +6,7 @@
       "item": "minecraft:stick"
     },
     "X": {
-      "item": "minecraft:gold_ingot"
+      "item": "minecraft:iron_ingot"
     }
   },
   "pattern": [
@@ -15,7 +15,7 @@
     " # "
   ],
   "result": {
-    "item": "better-hammers:golden_hammer"
-  },
-  "show_notification": true
+    "count": 1,
+    "id": "better-hammers:iron_hammer"
+  }
 }

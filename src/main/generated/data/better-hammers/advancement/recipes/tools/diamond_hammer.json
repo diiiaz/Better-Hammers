@@ -1,13 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_stick": {
+    "has_diamond": {
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:stick"
-            ]
+            "items": "minecraft:diamond"
           }
         ]
       },
@@ -15,21 +13,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "better-hammers:wooden_hammer"
+        "recipe": "better-hammers:diamond_hammer"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_stick",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_diamond"
     ]
   ],
   "rewards": {
     "recipes": [
-      "better-hammers:wooden_hammer"
+      "better-hammers:diamond_hammer"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

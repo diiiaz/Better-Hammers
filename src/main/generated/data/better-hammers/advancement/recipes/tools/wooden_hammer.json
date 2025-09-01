@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_cobblestone": {
+    "has_stick": {
       "conditions": {
         "items": [
           {
-            "tag": "minecraft:stone_tool_materials"
+            "items": "minecraft:stick"
           }
         ]
       },
@@ -13,21 +13,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "better-hammers:stone_hammer"
+        "recipe": "better-hammers:wooden_hammer"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_cobblestone",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_stick"
     ]
   ],
   "rewards": {
     "recipes": [
-      "better-hammers:stone_hammer"
+      "better-hammers:wooden_hammer"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }
