@@ -6,7 +6,8 @@
     "BlockMixin",
     "ServerPlayerInteractionManagerMixin",
     "WorldMixin",
-    "WorldRendererMixin"
+    "WorldRendererMixin",
+    "ZombieEntityMixin"
   ],
   "injectors": {
     "defaultRequire": 1
