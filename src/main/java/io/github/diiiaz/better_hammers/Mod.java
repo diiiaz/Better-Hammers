@@ -25,7 +25,6 @@ public class Mod implements ModInitializer {
 
     /*
      TODO:
-      - custom enchants does not work for now, they aren't even in the game.
-      - re-add the ability for vanilla enchantments to work on hammers,
+      - add hammers to villagers trades
      */
 }

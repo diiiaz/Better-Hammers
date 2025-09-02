@@ -1,2 +1,8 @@
-// 1.21.1	2025-09-02T09:53:29.4968976	Better Hammers/Tags for minecraft:item
-7bdff1685f0217b6c8064af1434b58855e460d29 data\better-hammers\tags\item\tools\hammers.json
+// 1.21.1	2025-09-02T10:17:16.0761209	Better Hammers/Tags for minecraft:item
+fc786a2470f4adbdaac0ea8399ad8d2d0710db54 data\minecraft\tags\item\enchantable\mace.json
+fc786a2470f4adbdaac0ea8399ad8d2d0710db54 data\c\tags\item\enchantables.json
+fc786a2470f4adbdaac0ea8399ad8d2d0710db54 data\minecraft\tags\item\enchantable\mining_loot.json
+7bdff1685f0217b6c8064af1434b58855e460d29 data\better-hammers\tags\item\hammers.json
+fc786a2470f4adbdaac0ea8399ad8d2d0710db54 data\minecraft\tags\item\enchantable\mining.json
+fc786a2470f4adbdaac0ea8399ad8d2d0710db54 data\minecraft\tags\item\enchantable\vanishing.json
+fc786a2470f4adbdaac0ea8399ad8d2d0710db54 data\minecraft\tags\item\enchantable\durability.json

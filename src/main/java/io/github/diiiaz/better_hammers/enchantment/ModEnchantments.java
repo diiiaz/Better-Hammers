@@ -5,7 +5,6 @@ import io.github.diiiaz.better_hammers.util.ModTags;
 import net.minecraft.component.type.AttributeModifierSlot;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.registry.*;
-import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.util.Identifier;
 
 public class ModEnchantments {
@@ -15,12 +14,10 @@ public class ModEnchantments {
 
 
     public static void bootstrap(Registerable<Enchantment> registerable) {
-//        var enchantments = registerable.getRegistryLookup(RegistryKeys.ENCHANTMENT);
         var items = registerable.getRegistryLookup(RegistryKeys.ITEM);
 
         register(registerable, MAGNITUDE, Enchantment.builder(
                 Enchantment.definition(
-                        items.getOrThrow(ItemTags.WEAPON_ENCHANTABLE),
                         items.getOrThrow(ModTags.Items.HAMMERS),
                         10,
                         2,
@@ -32,7 +29,6 @@ public class ModEnchantments {
 
         register(registerable, TUNNELER, Enchantment.builder(
                 Enchantment.definition(
-                        items.getOrThrow(ItemTags.WEAPON_ENCHANTABLE),
                         items.getOrThrow(ModTags.Items.HAMMERS),
                         10,
                         3,
