@@ -3,7 +3,6 @@
   "package": "io.github.diiiaz.better_hammers.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "BlockMixin",
     "ServerPlayerInteractionManagerMixin",
     "WorldMixin",
     "WorldRendererMixin",
